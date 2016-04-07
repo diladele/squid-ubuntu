@@ -1,0 +1,11 @@
+--- control	2016-02-17 00:59:20.000000000 +0100
++++ control.new	2016-02-22 22:33:47.835621504 +0100
+@@ -1,7 +1,7 @@
+ Source: libecap
+ Priority: extra
+ Maintainer: Luigi Gangitano <luigi@debian.org>
+-Build-Depends: debhelper (>= 8.0.0), autotools-dev, cdbs, dh-autoreconf, g++ (>= 4:5.2)
++Build-Depends: debhelper (>= 8.0.0), autotools-dev, cdbs, dh-autoreconf 
+ Standards-Version: 3.9.6
+ Section: libs
+ Homepage: http://www.e-cap.org/Downloads
