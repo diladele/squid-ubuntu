@@ -18,18 +18,18 @@ cp rules.patch build/squid3/rules.patch
 pushd build/squid3
 
 # get squid3 from debian stretch
-wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.16-1.dsc
-wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.16.orig.tar.gz
-wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.16-1.debian.tar.xz
+wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.17-1.dsc
+wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.17.orig.tar.gz
+wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.17-1.debian.tar.xz
 
 # unpack the source package
-dpkg-source -x squid3_3.5.16-1.dsc
+dpkg-source -x squid3_3.5.17-1.dsc
 
 # modify configure options in debian/rules, add --enable-ssl --enable-ssl-crtd
-patch squid3-3.5.16/debian/rules < ../../rules.patch
+patch squid3-3.5.17/debian/rules < ../../rules.patch
 
 # build the package
-cd squid3-3.5.16 && dpkg-buildpackage -rfakeroot -b
+cd squid3-3.5.17 && dpkg-buildpackage -rfakeroot -b
 
 # and revert
 popd
