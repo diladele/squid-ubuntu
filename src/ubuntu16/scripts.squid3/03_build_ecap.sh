@@ -11,22 +11,16 @@ rm -R build/libecap
 # we will be working in a subfolder make it
 mkdir -p build/libecap
 
-# copy the patch to the working folder
-cp control.patch build/libecap/control.patch
-
 # decend into working directory
 pushd build/libecap
 
 # get libecap from debian stretch
-wget http://http.debian.net/debian/pool/main/libe/libecap/libecap_1.0.1-3.dsc
+wget http://http.debian.net/debian/pool/main/libe/libecap/libecap_1.0.1-3.2.dsc
 wget http://http.debian.net/debian/pool/main/libe/libecap/libecap_1.0.1.orig.tar.gz
-wget http://http.debian.net/debian/pool/main/libe/libecap/libecap_1.0.1-3.debian.tar.xz
+wget http://http.debian.net/debian/pool/main/libe/libecap/libecap_1.0.1-3.2.debian.tar.xz
 
 # unpack the source package
-dpkg-source -x libecap_1.0.1-3.dsc
-
-# patch the rules file dropping explicit dependency on g++
-patch libecap-1.0.1/debian/control < ../../control.patch
+dpkg-source -x libecap_1.0.1-3.2.dsc
 
 # build the package
 cd libecap-1.0.1 && dpkg-buildpackage -rfakeroot -b

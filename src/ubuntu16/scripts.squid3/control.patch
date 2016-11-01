@@ -1,11 +1,11 @@
---- control	2016-02-17 00:59:20.000000000 +0100
-+++ control.new	2016-02-22 22:33:47.835621504 +0100
-@@ -1,7 +1,7 @@
- Source: libecap
- Priority: extra
- Maintainer: Luigi Gangitano <luigi@debian.org>
--Build-Depends: debhelper (>= 8.0.0), autotools-dev, cdbs, dh-autoreconf, g++ (>= 4:5.2)
-+Build-Depends: debhelper (>= 8.0.0), autotools-dev, cdbs, dh-autoreconf 
- Standards-Version: 3.9.6
- Section: libs
- Homepage: http://www.e-cap.org/Downloads
+--- control	2016-10-29 23:13:00.000000000 +0200
++++ control.new	2016-11-01 16:25:14.111887577 +0100
+@@ -5,7 +5,7 @@
+ Homepage: http://www.squid-cache.org
+ Standards-Version: 3.9.8
+ Vcs-Git: git://anonscm.debian.org/pkg-squid/pkg-squid3.git/
+-Build-Depends: libldap2-dev, libpam0g-dev, libdb-dev, cdbs, libsasl2-dev, debhelper (>=10), libcppunit-dev, libkrb5-dev, comerr-dev, libcap2-dev [linux-any], libecap3-dev (>= 1.0.1-2), libexpat1-dev, libxml2-dev, autotools-dev, libltdl-dev, dpkg-dev (>= 1.16.1~), pkg-config, libnetfilter-conntrack-dev [linux-any], nettle-dev, libgnutls28-dev, lsb-release
++Build-Depends: libldap2-dev, libpam0g-dev, libdb-dev, cdbs, libsasl2-dev, debhelper, libcppunit-dev, libkrb5-dev, comerr-dev, libcap2-dev [linux-any], libecap3-dev (>= 1.0.1-2), libexpat1-dev, libxml2-dev, autotools-dev, libltdl-dev, dpkg-dev (>= 1.16.1~), pkg-config, libnetfilter-conntrack-dev [linux-any], nettle-dev, libgnutls28-dev, lsb-release
+ XS-Testsuite: autopkgtest
+ 
+ Package: squid3

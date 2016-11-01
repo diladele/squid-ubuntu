@@ -9,8 +9,8 @@ fi
 pushd build/libecap
 
 # install ecap packages
-dpkg --install libecap3_1.0.1-3_amd64.deb
-dpkg --install libecap3-dev_1.0.1-3_amd64.deb
+dpkg --install libecap3_1.0.1-3.2_amd64.deb
+dpkg --install libecap3-dev_1.0.1-3.2_amd64.deb
 
 # and revert
 popd
