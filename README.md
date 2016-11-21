@@ -15,7 +15,7 @@ If you are installing Squid 3.5.22 for the first time run the following commands
 	wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add repo
-    echo "deb http://ubuntu16.diladele.com/ubuntu/ trusty main" > /etc/apt/sources.list.d/ubuntu16.diladele.com.list
+    echo "deb http://ubuntu16.diladele.com/ubuntu/ xenial main" > /etc/apt/sources.list.d/ubuntu16.diladele.com.list
 
     # update the apt cache
     apt-get update
