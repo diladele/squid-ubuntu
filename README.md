@@ -1,10 +1,10 @@
-squid-ubuntu
+Squid for Ubuntu
 ============
 
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile 3.5.23 on Ubuntu 16.04 LTS with support for HTTPS filtering and SSL inspection. These scripts are used in web filtering appliance Web Safety available for VMWare vSphere (ESXi) at https://diladele.com/virtual_appliance.html. The compiled debian packages for eCap and Squid 3.5.23 are available at ubuntu16.diladele.com repository.
+This project provides scripts needed to recompile 3.5.23 on Ubuntu 16.04 LTS with support for HTTPS filtering and SSL inspection. The compiled debian packages for eCap and Squid 3.5.23 are available at ubuntu16.diladele.com repository.
 
 **How to Use the Repository at ubuntu16.diladele.com** for Ubuntu 16
 --------------------------------------------------------------------
@@ -28,9 +28,9 @@ If you are installing Squid 3.5.23 for the first time run the following commands
 
 If you have installed previous versions of Squid 3.5 from this repo then please run "sudo apt-get update && sudo apt-get upgrade".  Please also check that your current squid.conf file from previous version is not overwritten.
 
-**HTTP and HTTPS Filtering on Using Squid and ICAP**
+**HTTP and HTTPS Filtering Using Squid and ICAP**
 -----------------------------
-In case you need a high quality HTTP(s) traffic filtering solution, we recommend **Diladele Web Safety**. 
+In case you need a high quality HTTP(s) traffic filtering solution, we recommend [**Diladele Web Safety**](https://www.diladele.com). 
 
 Web Safety for Squid Proxy is an ICAP web filtering server that integrates with Squid proxy server and provides rich content and web filtering functionality to sanitize Internet traffic passing into an internal home/enterprise network. It may be used to block illegal or potentially malicious file downloads, remove annoying advertisements, prevent access to various categories of web sites and block resources with adult/explicit content.
 
