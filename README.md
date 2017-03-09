@@ -28,6 +28,14 @@ If you are installing Squid 3.5.23 for the first time run the following commands
 
 If you have installed previous versions of Squid 3.5 from this repo then please run "sudo apt-get update && sudo apt-get upgrade".  Please also check that your current squid.conf file from previous version is not overwritten.
 
+**HTTP and HTTPS Filtering on Using Squid and ICAP**
+-----------------------------
+In case you need a high quality HTTP(s) traffic filtering solution, we recommend **Diladele Web Safety**. 
+
+Web Safety for Squid Proxy is an ICAP web filtering server that integrates with Squid proxy server and provides rich content and web filtering functionality to sanitize Internet traffic passing into an internal home/enterprise network. It may be used to block illegal or potentially malicious file downloads, remove annoying advertisements, prevent access to various categories of web sites and block resources with adult/explicit content.
+
+To try it out please have a look at our [Virtual Appliance](https://www.diladele.com/virtual_appliance.html).
+
 **Help**
 --------
 
