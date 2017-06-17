@@ -19,12 +19,12 @@ cp control.patch build/squid3/control.patch
 pushd build/squid3
 
 # get squid3 from debian stretch
-wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.23-1.dsc
+wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.23-5.dsc
 wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.23.orig.tar.gz
-wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.23-1.debian.tar.xz
+wget http://http.debian.net/debian/pool/main/s/squid3/squid3_3.5.23-5.debian.tar.xz
 
 # unpack the source package
-dpkg-source -x squid3_3.5.23-1.dsc
+dpkg-source -x squid3_3.5.23-5.dsc
 
 # modify configure options in debian/rules, add --enable-ssl --enable-ssl-crtd
 patch squid3-3.5.23/debian/rules < ../../rules.patch
