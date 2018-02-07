@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # decend into working directory
-pushd build/squid3
+pushd build/squid
 
 # install ecap packages
 sudo apt-get install squid-langpack
