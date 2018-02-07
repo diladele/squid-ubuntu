@@ -21,7 +21,8 @@ apt-get -y install \
 	libldap2-dev \
 	libpam0g-dev \
 	libgnutls28-dev \
-	libssl-dev
+	libssl-dev \
+	libdbi-perl
 
 # reboot now
 reboot

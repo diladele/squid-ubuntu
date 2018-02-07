@@ -8,11 +8,11 @@ fi
 # decend into working directory
 pushd build/squid
 
-# install ecap packages
+# install squid packages
 sudo apt-get install squid-langpack
-dpkg --install squid-common_3.5.23-5_all.deb
-dpkg --install squid_3.5.23-5_amd64.deb
-dpkg --install squidclient_3.5.23-5_amd64.deb
+dpkg --install squid-common_4.0.23-1~exp8_all.deb
+dpkg --install squid_4.0.23-1~exp8_amd64.deb
+dpkg --install squidclient_4.0.23-1~exp8_amd64.deb
 
 # and revert
 popd
