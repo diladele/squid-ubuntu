@@ -1,6 +1,17 @@
---- build/squid3/squid3-3.5.15/debian/rules	2016-02-17 01:13:33.000000000 +0100
-+++ build/squid3/squid3-3.5.15/debian/rules.new	2016-02-22 22:50:04.079470555 +0100
-@@ -45,7 +45,10 @@
+--- rules	2018-02-13 15:31:24.000000000 +0100
++++ rules.new	2018-02-16 10:34:46.000000000 +0100
+@@ -17,8 +17,8 @@
+ 						SPONSORS 
+ 
+ DEB_CONFIGURE_EXTRA_FLAGS := BUILDCXXFLAGS="$(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)" \
+-		CXX="g++-6" \
+-		CC="gcc-6" \
++		CXX="g++" \
++		CC="gcc" \
+ 		--datadir=/usr/share/squid \
+ 		--sysconfdir=/etc/squid \
+ 		--libexecdir=/usr/lib/squid \
+@@ -49,7 +49,10 @@
  		--with-pidfile=/var/run/squid.pid \
  		--with-filedescriptors=65536 \
  		--with-large-files \
