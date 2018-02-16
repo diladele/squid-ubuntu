@@ -10,9 +10,9 @@ pushd build/squid3
 
 # install ecap packages
 sudo apt-get install squid-langpack
-dpkg --install squid-common_3.5.23-5_all.deb
-dpkg --install squid_3.5.23-5_amd64.deb
-dpkg --install squidclient_3.5.23-5_amd64.deb
+dpkg --install squid-common_3.5.27-1_all.deb
+dpkg --install squid_3.5.27-1_amd64.deb
+dpkg --install squidclient_3.5.27-1_amd64.deb
 
 # and revert
 popd
