@@ -4,18 +4,18 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile 3.5.23 on Ubuntu 16.04 LTS with support for HTTPS filtering and SSL inspection. The compiled debian packages for eCap and Squid 3.5.23 are available at ubuntu16.diladele.com repository.
+This project provides scripts needed to recompile 3.5.27 on Ubuntu 16.04 LTS with support for HTTPS filtering and SSL inspection. The compiled debian packages for eCap and Squid 3.5.27 are available at squid3527.diladele.com repository.
 
-**How to Use the Repository at ubuntu16.diladele.com** for Ubuntu 16
+**How to Use the Repository at squid3527.diladele.com** for Ubuntu 16
 --------------------------------------------------------------------
 
-If you are installing Squid 3.5.23 for the first time run the following commands:
+If you are installing Squid 3.5.27 for the first time run the following commands:
 
 	# add diladele apt key
 	wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add repo
-    echo "deb http://ubuntu16.diladele.com/ubuntu/ xenial main" > /etc/apt/sources.list.d/ubuntu16.diladele.com.list
+    echo "deb http://squid3527.diladele.com/ubuntu/ xenial main" > /etc/apt/sources.list.d/squid3527.diladele.com.list
 
     # update the apt cache
     apt-get update
@@ -30,7 +30,7 @@ If you have installed previous versions of Squid 3.5 from this repo then please 
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -----------------------------
-In case you need a high quality HTTP(s) traffic filtering solution, we recommend [**Diladele Web Safety**](https://www.diladele.com). 
+In case you need a high quality HTTP(S) traffic filtering solution, we recommend [**Web Safety**](https://www.diladele.com). 
 
 Web Safety for Squid Proxy is an ICAP web filtering server that integrates with Squid proxy server and provides rich content and web filtering functionality to sanitize Internet traffic passing into an internal home/enterprise network. It may be used to block illegal or potentially malicious file downloads, remove annoying advertisements, prevent access to various categories of web sites and block resources with adult/explicit content.
 
