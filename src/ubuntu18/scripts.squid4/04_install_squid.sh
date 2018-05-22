@@ -5,13 +5,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# decend into working directory
-pushd build/squid
-
 # set squid version
 source squid.ver
-#SQUID_VER="4.0.24"
-#SQUID_PKG="${SQUID_VER}-1~exp16"
+
+# decend into working directory
+pushd build/squid
 
 # install squid packages
 sudo apt-get install squid-langpack
