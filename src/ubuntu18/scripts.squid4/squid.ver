@@ -1,0 +1,3 @@
+# set squid version
+SQUID_VER="4.0.24"
+SQUID_PKG="${SQUID_VER}-1~exp16"
