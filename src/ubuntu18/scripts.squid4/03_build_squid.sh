@@ -13,15 +13,12 @@ mkdir -p build/squid
 
 # copy the patches to the working folder
 cp rules.patch build/squid/rules.patch
-cp control.patch build/squid/control.patch
-
-# decend into working directory
-pushd build/squid
 
 # set squid version
 source squid.ver
-#SQUID_VER="4.0.24"
-#SQUID_PKG="${SQUID_VER}-1~exp16"
+
+# decend into working directory
+pushd build/squid
 
 # get squid from debian experimental
 wget http://http.debian.net/debian/pool/main/s/squid/squid_${SQUID_PKG}.dsc
