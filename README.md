@@ -6,6 +6,27 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile Squid on Ubuntu 16.04 and 18.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
+**Squid 4.3 Repo for Ubuntu 18**
+--------------------------------
+
+If you are installing Squid 4.3 for the first time from diladele.com repo, run the following commands:
+
+    # add diladele apt key
+    wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
+
+    # add repo
+    echo "deb http://squid43.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid43.diladele.com.list
+
+    # update the apt cache
+    apt-get update
+
+    # install 
+    apt-get install squid-common
+    apt-get install squid 
+    apt-get install squidclient
+
+If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade".  Also check that your current squid.conf file from previous version is not overwritten.
+
 **Squid 3.5.27 Repo for Ubuntu 16**
 -----------------------------------
 
@@ -27,28 +48,6 @@ If you are installing Squid 3.5.27 for the first time from diladele.com repo, ru
     apt-get install squidclient
 
 If you have installed previous versions of Squid 3.5 from this repo then please run "sudo apt-get update && sudo apt-get upgrade".  Please also check that your current squid.conf file from previous version is not overwritten.
-
-
-**Squid 4.2 Repo for Ubuntu 18**
---------------------------------
-
-If you are installing Squid 4.2 for the first time from diladele.com repo, run the following commands:
-
-    # add diladele apt key
-    wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
-
-    # add repo
-    echo "deb http://squid42.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid42.diladele.com.list
-
-    # update the apt cache
-    apt-get update
-
-    # install 
-    apt-get install squid-common
-    apt-get install squid 
-    apt-get install squidclient
-
-If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade".  Also check that your current squid.conf file from previous version is not overwritten.
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
