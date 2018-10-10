@@ -5,6 +5,9 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+# some packages are in universe, so enable it
+add-apt-repository universe
+
 # install build tools
 apt-get -y install devscripts build-essential fakeroot debhelper dh-autoreconf cdbs
 
