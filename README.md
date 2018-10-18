@@ -36,16 +36,13 @@ If you are installing Squid 3.5.27 for the first time from diladele.com repo, ru
 	wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add repo
-    echo "deb http://squid3527.diladele.com/ubuntu/ xenial main" > /etc/apt/sources.list.d/squid3527.diladele.com.list
+    echo "deb http://squid3527.diladele.com/ubuntu/ xenial main" | sudo tee /etc/apt/sources.list.d/squid3527.diladele.com.list
 
     # update the apt cache
-    apt-get update
+    sudo apt-get update
 
     # install 
-    apt-get install libecap3
-    apt-get install squid-common
-    apt-get install squid 
-    apt-get install squidclient
+    sudo apt-get install libecap3 squid-common squid squidclient
 
 If you have installed previous versions of Squid 3.5 from this repo then please run "sudo apt-get update && sudo apt-get upgrade".  Please also check that your current squid.conf file from previous version is not overwritten.
 
