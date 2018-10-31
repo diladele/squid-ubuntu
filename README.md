@@ -6,16 +6,16 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile Squid on Ubuntu 16.04 and 18.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
-**Squid 4.3 Repo for Ubuntu 18**
+**Squid 4.4 Repo for Ubuntu 18**
 --------------------------------
 
-If you are installing Squid 4.3 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 4.4 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add repo
-    echo "deb http://squid43.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid43.diladele.com.list
+    echo "deb http://squid44.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid44.diladele.com.list
 
     # update the apt cache
     apt-get update
