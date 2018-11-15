@@ -27,27 +27,20 @@ If you are installing Squid 4.4 for the first time from diladele.com repo, run t
 
 If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade".  Also check that your current squid.conf file from previous version is not overwritten.
 
-**Squid 3.5.27 Repo for Ubuntu 16**
------------------------------------
+**Squid 4.4 Repo for Ubuntu 16**
+--------------------------------
 
-If you are installing Squid 3.5.27 for the first time from diladele.com repo, run the following commands:
+Unfortunately there is no online repo for this version of Ubuntu. If possible consider switching to Squid 4 running on Ubuntu 18. 
+To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from stc/ubunt16 to your target machine and run these one by one.
 
-	# add diladele apt key
-	wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
-    # add repo
-    echo "deb http://squid3527.diladele.com/ubuntu/ xenial main" > /etc/apt/sources.list.d/squid3527.diladele.com.list
-
-    # update the apt cache
-    apt-get update
-
-    # install 
-    apt-get install libecap3
-    apt-get install squid-common
-    apt-get install squid 
-    apt-get install squidclient
-
-If you have installed previous versions of Squid 3.5 from this repo then please run "sudo apt-get update && sudo apt-get upgrade".  Please also check that your current squid.conf file from previous version is not overwritten.
+	sudo bash 01_update.sh
+    sudo bash 02_tools.sh
+    sudo bash 03_build_ecap.sh
+    sudo bash 04_install_ecap.sh
+    bash 05_build_squid.sh
+    sudo bash 06_install_squid.sh
+    sudo bash 07_acceptance.sh
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
