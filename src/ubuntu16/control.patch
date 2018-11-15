@@ -1,0 +1,17 @@
+--- control	2018-10-30 14:57:15.000000000 +0100
++++ control.new	2018-11-15 11:14:16.000000000 +0100
+@@ -10,13 +10,12 @@
+ Build-Depends: ed, libltdl-dev, pkg-config
+ 	, g++ (>= 4.9) | clang (>= 3.7)
+ 	, gcc (>= 4.9) | clang (>= 3.7)
+-	, cdbs, debhelper (>=10), dpkg-dev (>= 1.17.11~), lsb-release
++	, cdbs, debhelper (>=9), dpkg-dev (>= 1.17.11~), lsb-release
+ 	, libcppunit-dev
+ 	, libcap2-dev [linux-any]
+ 	, libdb-dev
+ 	, libecap3-dev (>= 1.0.1-2)
+ 	, libexpat1-dev
+-	, libgnutls28-dev (>= 3.5)
+ 	, libkrb5-dev, comerr-dev
+ 	, libldap2-dev
+ 	, libnetfilter-conntrack-dev [linux-any]
