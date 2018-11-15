@@ -34,13 +34,13 @@ Unfortunately there is no online repo for this version of Ubuntu. If possible co
 To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from stc/ubunt16 to your target machine and run these one by one.
 
 
-	sudo bash 01_update.sh
-    sudo bash 02_tools.sh
-    sudo bash 03_build_ecap.sh
-    sudo bash 04_install_ecap.sh
-    bash 05_build_squid.sh
-    sudo bash 06_install_squid.sh
-    sudo bash 07_acceptance.sh
+	$ sudo bash 01_update.sh
+    $ sudo bash 02_tools.sh
+    $ sudo bash 03_build_ecap.sh
+    $ sudo bash 04_install_ecap.sh
+    $ bash 05_build_squid.sh
+    $ sudo bash 06_install_squid.sh
+    $ sudo bash 07_acceptance.sh
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
