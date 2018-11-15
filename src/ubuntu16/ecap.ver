@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# set ecap version
+ECAP_VER="1.0.1"
+ECAP_PKG="${ECAP_VER}-3.2"
