@@ -36,7 +36,7 @@ To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from 
 
 	$ sudo bash 01_update.sh
     $ sudo bash 02_tools.sh
-    $ sudo bash 03_build_ecap.sh
+    $ bash 03_build_ecap.sh
     $ sudo bash 04_install_ecap.sh
     $ bash 05_build_squid.sh
     $ sudo bash 06_install_squid.sh
