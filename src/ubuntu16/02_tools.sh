@@ -7,15 +7,6 @@ fi
 # install build tools
 apt-get -y install devscripts build-essential fakeroot cdbs debhelper dh-autoreconf
 
-#  
-
-# install build dependences for squid
-#apt-get -y build-dep libecap
-#apt-get -y build-dep squid3
-
-# uninstall libecap2 as we will be using the libecap3
-#apt-get -y --purge remove libecap2-dev libecap2
-
 # install additional packages for new squid
 apt-get -y install \
     libsasl2-dev \
@@ -32,11 +23,3 @@ apt-get -y install \
     libltdl-dev \
     libssl-dev \
     libdbi-perl
-
-#  libgnutls28-dev  
-#        
-#   comerr-dev    \
-#   
-
-# reboot now
-#reboot
