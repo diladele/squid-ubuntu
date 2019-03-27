@@ -12,10 +12,11 @@ source squid.ver
 pushd build/squid
 
 # install squid packages
+arch=$(dpkg --print-architecture)
 sudo apt-get install squid-langpack
 dpkg --install squid-common_${SQUID_PKG}_all.deb
-dpkg --install squid_${SQUID_PKG}_amd64.deb
-dpkg --install squidclient_${SQUID_PKG}_amd64.deb
+dpkg --install squid_${SQUID_PKG}_${arch}.deb
+dpkg --install squidclient_${SQUID_PKG}_${arch}.deb
 
 # and revert
 popd
