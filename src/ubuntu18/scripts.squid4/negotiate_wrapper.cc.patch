@@ -1,0 +1,11 @@
+--- negotiate_wrapper.cc.original	2019-05-15 19:16:15.000000000 +0200
++++ negotiate_wrapper.cc	2019-05-15 19:18:45.000000000 +0200
+@@ -185,7 +185,7 @@
+                     LogTime(), PROGRAM, buf + 3, (int) length);
+ 
+         safe_free(token);
+-        if (!(token = static_cast<uint8_t *>(xmalloc(length)))) {
++        if (!(token = static_cast<uint8_t *>(xmalloc(length+1)))) {
+             fprintf(stderr, "%s| %s: Error allocating memory for token\n", LogTime(), PROGRAM);
+             return 1;
+         }
