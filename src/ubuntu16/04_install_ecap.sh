@@ -11,8 +11,9 @@ source ecap.ver
 pushd build/libecap
 
 # install ecap packages
-dpkg --install libecap3_${ECAP_PKG}_amd64.deb
-dpkg --install libecap3-dev_${ECAP_PKG}_amd64.deb
+arch=$(dpkg --print-architecture)
+dpkg --install libecap3_${ECAP_PKG}_${arch}.deb
+dpkg --install libecap3-dev_${ECAP_PKG}_${arch}.deb
 
 # and revert
 popd
