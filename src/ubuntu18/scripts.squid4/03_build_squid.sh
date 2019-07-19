@@ -13,7 +13,6 @@ mkdir -p build/squid
 
 # copy the patches to the working folder
 cp rules.patch build/squid/rules.patch
-cp negotiate_wrapper.cc.patch build/squid/negotiate_wrapper.cc.patch
 
 # set squid version
 source squid.ver
@@ -31,7 +30,6 @@ dpkg-source -x squid_${SQUID_PKG}.dsc
 
 # modify configure options in debian/rules, add --enable-ssl --enable-ssl-crtd
 patch squid-${SQUID_VER}/debian/rules < ../../rules.patch
-patch squid-${SQUID_VER}/src/auth/negotiate/wrapper/negotiate_wrapper.cc < ../../negotiate_wrapper.cc.patch
 
 # build the package
 cd squid-${SQUID_VER} && dpkg-buildpackage -rfakeroot -b

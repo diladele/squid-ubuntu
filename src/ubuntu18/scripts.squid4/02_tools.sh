@@ -9,7 +9,7 @@ fi
 add-apt-repository universe
 
 # install build tools
-apt-get -y install devscripts build-essential fakeroot debhelper dh-autoreconf cdbs
+apt-get -y install devscripts build-essential fakeroot debhelper dh-autoreconf dh-apparmor cdbs
 
 # install additional header packages for squid 4
 apt-get -y install \
@@ -30,4 +30,4 @@ apt-get -y install \
     libecap3-dev
 
 # reboot now
-reboot
+# reboot
