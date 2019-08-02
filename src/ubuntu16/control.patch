@@ -1,11 +1,12 @@
---- control	2019-02-23 19:09:58.281807888 +0100
-+++ control.new	2019-02-23 19:09:31.041476910 +0100
-@@ -11,13 +11,12 @@
+--- control	2019-07-18 22:28:15.000000000 +0200
++++ control.new	2019-08-02 13:07:57.588553854 +0200
+@@ -11,14 +11,13 @@
  # The compiler dependencies are relevant for backporting.
  	, g++ (>= 4.9) <!cross> | clang (>= 3.7) <!cross>
  	, gcc (>= 4.9) <!cross> | clang (>= 3.7) <!cross>
 -	, cdbs, debhelper (>=10), dpkg-dev (>= 1.17.11~), lsb-release
 +	, cdbs, debhelper (>=9), dpkg-dev (>= 1.17.11~), lsb-release
+ 	, dh-apparmor
  	, libcppunit-dev
  	, libcap2-dev [linux-any]
  	, libdb-dev
