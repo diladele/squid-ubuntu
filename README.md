@@ -31,7 +31,7 @@ If you have installed previous versions of Squid 4 from this repo then run "sudo
 --------------------------------
 
 Unfortunately there is no online repo for this version of Ubuntu. If possible consider switching to Squid 4 running on Ubuntu 18. 
-To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from src/ubunt16 to your target machine and run these one by one.
+To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from src/ubuntu16 to your target machine and run these one by one.
 
 
 	$ sudo bash 01_update.sh
