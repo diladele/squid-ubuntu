@@ -6,16 +6,16 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile modern version of Squid on Ubuntu 16.04 and 18.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
-**Squid 4.9 Repo for Ubuntu 18**
---------------------------------
+**Squid 4.10 Repo for Ubuntu 18**
+---------------------------------
 
-If you are installing Squid 4.9 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 4.10 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add repo
-    echo "deb http://squid49.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid49.diladele.com.list
+    echo "deb http://squid410.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid410.diladele.com.list
 
     # update the apt cache
     apt-get update
@@ -27,8 +27,8 @@ If you are installing Squid 4.9 for the first time from diladele.com repo, run t
 
 If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
 
-**Squid 4.9 Repo for Ubuntu 16**
---------------------------------
+**Squid 4.10 Repo for Ubuntu 16**
+---------------------------------
 
 Unfortunately there is no online repo for this version of Ubuntu. If possible consider switching to Squid 4 running on Ubuntu 18. 
 To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from src/ubuntu16 to your target machine and run these one by one.
@@ -52,14 +52,14 @@ Web Safety also has a very good Admin UI that you can use to manage your Squid p
 
 To try it out, have a look at [Virtual Appliance ESXi/Hyper-v](https://www.diladele.com/download.html), [deploy in Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/diladele.websafety?tab=Overview) or [deploy in Amazon AWS](https://aws.amazon.com/marketplace/pp/B07KJHLHKC)
 
-**Dns Filtering**
------------------
+**DNS Filter**
+--------------
 
-In case full featured HTTPS decryption and web filtering is not possible in your network, consider using lightweight DNS filtering solution from https://dnssafety.io. Dns Safety filter is a DNS forwarding server (like dnsmasq, pi-hole) with extensive filtering capabilities. It allows administrator to filter access to domain names by categories, easily block access to user specified domains and provides different access policies for different groups of machines in your network.
+In case full featured HTTPS decryption and web filtering is not possible in your network, consider using our lightweight DNS filtering solution https://dnssafety.diladele.com. Dns Safety filter is a DNS forwarding server (like dnsmasq, pi-hole) with extensive filtering capabilities. It allows administrator to filter access to domain names by categories, easily block access to user specified domains and provides different access policies for different groups of machines in your network.
 
 Dns Safety is supposed to be deployed as primary DNS server in your local network and can forward DNS requests to your ISP's DNS server, Google Public DNS, OpenDNS and other third party DNS providers. Internal DNS requests can be forwarded to internal DNS servers (for example Active Directory domain controllers).
 
-The filter can be easily managed from full featured Web UI deployed on Ubuntu 18 LTS. Other operating systems might be supported too in the near future.
+The filter can be easily managed from full featured Web UI deployed on Debian 10 or Ubuntu 18. Other operating systems might be supported too in the near future.
 
 **Help**
 --------
