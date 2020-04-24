@@ -27,7 +27,5 @@ apt-get -y install \
     libssl-dev \
     libdbi-perl \
     libecap3 \
-    libecap3-dev
-
-# reboot now
-# reboot
+    libecap3-dev \
+    libsystemd-dev
