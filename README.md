@@ -4,7 +4,7 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile modern version of Squid on Ubuntu 16.04 and 18.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
+This project provides scripts needed to recompile modern version of Squid on Ubuntu 16 and 18/20 with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
 **Squid 4.11 Repo for Ubuntu 18**
 ---------------------------------
@@ -26,6 +26,18 @@ If you are installing Squid 4.11 for the first time from diladele.com repo, run 
     apt-get install squidclient
 
 If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
+
+**Squid 4.11 Repo for Ubuntu 20**
+---------------------------------
+
+Unfortunately there is no online repo for this version of Ubuntu yet. To rebuild the Squid 4 on your instance of Ubuntu 20, download scripts from src/ubuntu18 (yes 18) to your target machine and run these one by one.
+
+
+    $ sudo bash 01_update.sh
+    $ sudo bash 02_tools.sh
+    $ bash 03_build_squid.sh
+    $ sudo bash 04_install_squid.sh
+    $ sudo bash 05_acceptance.sh
 
 **Squid 4.11 Repo for Ubuntu 16**
 ---------------------------------
