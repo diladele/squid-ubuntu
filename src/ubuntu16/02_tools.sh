@@ -22,4 +22,5 @@ apt-get -y install \
     libcap2-dev \
     libltdl-dev \
     libssl-dev \
-    libdbi-perl
+    libdbi-perl \
+    libsystemd-dev
