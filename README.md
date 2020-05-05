@@ -30,7 +30,7 @@ If you have installed previous versions of Squid 4 from this repo then run "sudo
 **Squid 4.11 Repo for Ubuntu 20**
 ---------------------------------
 
-Unfortunately there is no online repo for this version of Ubuntu yet. To rebuild the Squid 4 on your instance of Ubuntu 20, download scripts from src/ubuntu18 (yes 18) to your target machine and run these one by one.
+Unfortunately there is no online repo for this version of Ubuntu yet. To rebuild the Squid 4 on your instance of Ubuntu 20, download scripts from src/ubuntu18 (yes 18!) to your target machine and run these one by one.
 
 
     $ sudo bash 01_update.sh
