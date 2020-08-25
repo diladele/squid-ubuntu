@@ -6,16 +6,16 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile modern version of Squid on Ubuntu 16 and 18/20 with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
-**Squid 4.12 Repo for Ubuntu 18**
+**Squid 4.13 Repo for Ubuntu 18**
 ---------------------------------
 
-If you are installing Squid 4.12 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 4.13 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add repo
-    echo "deb http://squid411.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid412.diladele.com.list
+    echo "deb http://squid413.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid413.diladele.com.list
 
     # update the apt cache
     apt-get update
@@ -27,7 +27,7 @@ If you are installing Squid 4.12 for the first time from diladele.com repo, run 
 
 If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
 
-**Squid 4.12 Repo for Ubuntu 20**
+**Squid 4.13 Repo for Ubuntu 20**
 ---------------------------------
 
 Unfortunately there is no online repo for this version of Ubuntu yet. To rebuild the Squid 4 on your instance of Ubuntu 20, download scripts from src/ubuntu18 (yes 18!) to your target machine and run these one by one.
@@ -39,7 +39,7 @@ Unfortunately there is no online repo for this version of Ubuntu yet. To rebuild
     $ sudo bash 04_install_squid.sh
     $ sudo bash 05_acceptance.sh
 
-**Squid 4.12 Repo for Ubuntu 16**
+**Squid 4.13 Repo for Ubuntu 16**
 ---------------------------------
 
 Unfortunately there is no online repo for this version of Ubuntu. If possible consider switching to Squid 4 running on Ubuntu 18. 

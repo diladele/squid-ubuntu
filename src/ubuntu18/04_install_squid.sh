@@ -19,3 +19,7 @@ dpkg --install squidclient_${SQUID_PKG}_amd64.deb
 
 # and revert
 popd
+
+# verify the installed squid binary
+systemctl stop squid && systemctl start squid && systemctl status squid && /usr/sbin/squid -v
+
