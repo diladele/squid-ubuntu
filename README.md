@@ -4,55 +4,33 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile modern version of Squid on Ubuntu 16 and 18/20 with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
+This project provides scripts needed to recompile modern version of Squid on Ubuntu 20.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
-**Squid 4.13 Repo for Ubuntu 18**
----------------------------------
+**Squid 4.13 Repo for Ubuntu 20.04 LTS**
+----------------------------------------
 
 If you are installing Squid 4.13 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
-    wget -qO - http://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
+    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
-    # add repo
-    echo "deb http://squid413.diladele.com/ubuntu/ bionic main" > /etc/apt/sources.list.d/squid413.diladele.com.list
+    # add new repo
+    echo "deb https://squid413-ubuntu20.diladele.com/ubuntu/ focal main" \
+        > /etc/apt/sources.list.d/squid413-ubuntu20.diladele.com.list
 
-    # update the apt cache
-    apt-get update
-
-    # install 
-    apt-get install squid-common
-    apt-get install squid 
-    apt-get install squidclient
+    # and install
+    apt-get update && apt-get install -y \
+        squid-common \
+        squid-openssl \
+        squidclient \
+        libecap3 libecap3-dev
 
 If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
 
-**Squid 4.13 Repo for Ubuntu 20**
----------------------------------
+**Squid 4.13 Repo for older versions of Ubuntu**
+------------------------------------------------
 
-Unfortunately there is no online repo for this version of Ubuntu yet. To rebuild the Squid 4 on your instance of Ubuntu 20, download scripts from src/ubuntu18 (yes 18!) to your target machine and run these one by one.
-
-
-    $ sudo bash 01_update.sh
-    $ sudo bash 02_tools.sh
-    $ bash 03_build_squid.sh
-    $ sudo bash 04_install_squid.sh
-    $ sudo bash 05_acceptance.sh
-
-**Squid 4.13 Repo for Ubuntu 16**
----------------------------------
-
-Unfortunately there is no online repo for this version of Ubuntu. If possible consider switching to Squid 4 running on Ubuntu 18. 
-To rebuild the Squid 4 on your instance of Ubuntu 16 LTS, download scripts from src/ubuntu16 to your target machine and run these one by one.
-
-
-	$ sudo bash 01_update.sh
-    $ sudo bash 02_tools.sh
-    $ bash 03_build_ecap.sh
-    $ sudo bash 04_install_ecap.sh
-    $ bash 05_build_squid.sh
-    $ sudo bash 06_install_squid.sh
-    $ sudo bash 07_acceptance.sh
+Unfortunately there are no more online repos for older versions of Ubuntu. Please try rebuilding using the scripts in ubuntu16 and ubuntu 18 folders. Send us a pull request of you are successful. Unfortunately latest versions on Squid in Debian unstable contain too many changes to easily have those backported to older versions on Ubuntu.
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
@@ -63,6 +41,13 @@ Web Safety for Squid Proxy is an ICAP web filtering server that integrates with 
 Web Safety also has a very good Admin UI that you can use to manage your Squid proxy from the browser. 
 
 To try it out, have a look at [Virtual Appliance ESXi/Hyper-v](https://www.diladele.com/download.html), [deploy in Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/diladele.websafety?tab=Overview) or [deploy in Amazon AWS](https://aws.amazon.com/marketplace/pp/B07KJHLHKC)
+
+**Web Filtering Proxy for Microsoft Windows**
+---------------------------------------------
+
+If your need a native Windows only web filtering solution please consider taking a look at [Web Filtering Proxy](https://webproxy.diladele.com). Web Filtering Proxy for Microsoft Windows is a new implementation of web filtering proxy running natively on Microsoft Windows. It can be easily integrated with Microsoft Active Directory, work as Secure Web Proxy, decrypt HTTPS traffic, filter HTTP requests and responses and inspect contents of HTML pages.
+
+The proxy is installed natively on Microsoft Windows and can be managed by any administrator using Microsoft Management Console. The [Admin Guide](https://webproxy.diladele.com/docs/) is available online.
 
 **DNS Filter**
 --------------
