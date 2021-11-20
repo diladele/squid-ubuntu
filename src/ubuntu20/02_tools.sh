@@ -11,7 +11,7 @@ add-apt-repository universe
 # install build tools
 apt-get -y install devscripts build-essential fakeroot debhelper dh-autoreconf dh-apparmor cdbs
 
-# install additional header packages for squid 4
+# install additional header packages for squid 5
 apt-get -y install \
     libcppunit-dev \
     libsasl2-dev \
