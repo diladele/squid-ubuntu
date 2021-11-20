@@ -16,6 +16,7 @@ source squid.ver
 
 # copy the patch
 cp control.patch build/squid/
+cp rules.patch build/squid/
 
 # decend into working directory
 pushd build/squid
@@ -31,6 +32,7 @@ dpkg-source -x squid_${SQUID_PKG}.dsc
 
 # patch the control file
 patch squid-${SQUID_VER}/debian/control < control.patch
+patch squid-${SQUID_VER}/debian/rules < rules.patch
 
 # build the package
 cd squid-${SQUID_VER} && dpkg-buildpackage -rfakeroot -b -us -uc
