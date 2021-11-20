@@ -20,7 +20,7 @@ apt-get -y install \
     libdb-dev \
     libnetfilter-conntrack-dev \
     libexpat1-dev \
-    libcap2-dev \
+    libcap-dev \
     libldap2-dev \
     libpam0g-dev \
     libgnutls28-dev \
@@ -28,4 +28,5 @@ apt-get -y install \
     libdbi-perl \
     libecap3 \
     libecap3-dev \
-    libsystemd-dev
+    libsystemd-dev \
+    libtdb-dev
