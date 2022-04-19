@@ -6,6 +6,27 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile modern version of Squid on Ubuntu 20.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
+**Squid 5.5 Repo for Ubuntu 20.04 LTS**
+----------------------------------------
+
+If you are installing Squid 5.5 for the first time from diladele.com repo, run the following commands:
+
+    # add diladele apt key
+    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
+
+    # add new repo
+    echo "deb https://squid55.diladele.com/ubuntu/ focal main" \
+        > /etc/apt/sources.list.d/squid55.diladele.com.list
+
+    # and install
+    apt-get update && apt-get install -y \
+        squid-common \
+        squid-openssl \
+        squidclient \
+        libecap3 libecap3-dev
+
+If you have installed previous versions of Squid 5 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
+
 **Squid 4.13 Repo for Ubuntu 20.04 LTS**
 ----------------------------------------
 
@@ -26,11 +47,6 @@ If you are installing Squid 4.13 for the first time from diladele.com repo, run 
         libecap3 libecap3-dev
 
 If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
-
-**Squid 4.13 Repo for older versions of Ubuntu**
-------------------------------------------------
-
-Unfortunately there are no more online repos for older versions of Ubuntu. Please try rebuilding using the scripts in ubuntu16 and ubuntu 18 folders. Send us a pull request of you are successful. Unfortunately latest versions on Squid in Debian unstable contain too many changes to easily have those backported to older versions on Ubuntu.
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
