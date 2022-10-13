@@ -14,6 +14,9 @@ mkdir -p build/squid
 # set squid version
 source squid.ver
 
+# copy the patches to working directory
+cp control.patch build/squid/
+
 # decend into working directory
 pushd build/squid
 
@@ -25,6 +28,9 @@ wget http://http.debian.net/debian/pool/main/s/squid/squid_${SQUID_PKG}.debian.t
 
 # unpack the source package
 dpkg-source -x squid_${SQUID_PKG}.dsc
+
+# patch the control
+patch squid-${SQUID_VER}/debian/control < control.patch
 
 # build the package
 cd squid-${SQUID_VER} && dpkg-buildpackage -rfakeroot -b -us -uc
