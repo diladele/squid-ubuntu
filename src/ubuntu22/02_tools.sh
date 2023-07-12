@@ -24,4 +24,5 @@ apt-get -y install \
    libexpat1-dev \
    libgnutls28-dev \
    libltdl-dev \
-   libecap3-dev
+   libecap3-dev \
+   libdbi-perl
