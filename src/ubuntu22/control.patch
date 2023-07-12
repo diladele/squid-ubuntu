@@ -1,0 +1,11 @@
+--- control.old	2022-10-12 10:24:13.396181441 +0000
++++ control	2022-10-12 10:24:35.228069617 +0000
+@@ -13,7 +13,7 @@
+ # The compiler dependencies are relevant for backporting.
+ 	, g++ (>= 4.9) <!cross> | clang (>= 3.7) <!cross>
+ 	, gcc (>= 4.9) <!cross> | clang (>= 3.7) <!cross>
+-	, debhelper-compat (= 13)
++	, debhelper-compat (= 12)
+     , lsb-release
+ 	, dh-apparmor
+ 	, libcppunit-dev
