@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # install build tools
-apt-get -y install dpkg-dev dh-apparmor debhelper ed
+apt-get -y install dpkg-dev dh-apparmor debhelper ed logrotate
 
 # install additional header packages for squid 6
 apt-get -y install \
