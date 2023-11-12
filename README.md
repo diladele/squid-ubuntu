@@ -4,7 +4,28 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile modern version of Squid on Ubuntu 20.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
+This project provides scripts needed to recompile modern version of Squid on Ubuntu 20.04 and 22.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
+
+**Squid 6.5 Repo for Ubuntu 22.04 LTS**
+----------------------------------------
+
+If you are installing Squid 6.5 for the first time from diladele.com repo, run the following commands:
+
+    # add diladele apt key
+    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
+
+    # add new repo
+    echo "deb https://squid65.diladele.com/ubuntu/ jammy main" \
+        > /etc/apt/sources.list.d/squid65.diladele.com.list
+
+    # and install
+    apt-get update && apt-get install -y \
+        squid-common \
+        squid-openssl \
+        squidclient \
+        libecap3 libecap3-dev
+
+If you have installed previous versions of Squid 6 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
 
 **Squid 5.7 Repo for Ubuntu 20.04 LTS**
 ----------------------------------------
@@ -26,27 +47,6 @@ If you are installing Squid 5.7 for the first time from diladele.com repo, run t
         libecap3 libecap3-dev
 
 If you have installed previous versions of Squid 5 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
-
-**Squid 4.13 Repo for Ubuntu 20.04 LTS**
-----------------------------------------
-
-If you are installing Squid 4.13 for the first time from diladele.com repo, run the following commands:
-
-    # add diladele apt key
-    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
-
-    # add new repo
-    echo "deb https://squid413-ubuntu20.diladele.com/ubuntu/ focal main" \
-        > /etc/apt/sources.list.d/squid413-ubuntu20.diladele.com.list
-
-    # and install
-    apt-get update && apt-get install -y \
-        squid-common \
-        squid-openssl \
-        squidclient \
-        libecap3 libecap3-dev
-
-If you have installed previous versions of Squid 4 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
