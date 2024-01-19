@@ -6,17 +6,17 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile modern version of Squid on Ubuntu 20.04 and 22.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
-**Squid 6.5 Repo for Ubuntu 22.04 LTS**
+**Squid 6.6 Repo for Ubuntu 22.04 LTS**
 ----------------------------------------
 
-If you are installing Squid 6.5 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 6.6 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add new repo
-    echo "deb https://squid65.diladele.com/ubuntu/ jammy main" \
-        > /etc/apt/sources.list.d/squid65.diladele.com.list
+    echo "deb https://squid66.diladele.com/ubuntu/ jammy main" \
+        > /etc/apt/sources.list.d/squid66.diladele.com.list
 
     # and install
     apt-get update && apt-get install -y \
