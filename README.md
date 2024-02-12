@@ -16,10 +16,10 @@ If you are installing Squid 6.6 for the first time from diladele.com repo, run t
 
     # add new repo
     echo "deb https://squid66.diladele.com/ubuntu/ jammy main" \
-        > /etc/apt/sources.list.d/squid66.diladele.com.list
+        | sudo tee /etc/apt/sources.list.d/squid66.diladele.com.list
 
     # and install
-    apt-get update && apt-get install -y \
+    sudo apt-get update && sudo apt-get install -y \
         squid-common \
         squid-openssl \
         squidclient \
@@ -37,10 +37,10 @@ If you are installing Squid 5.7 for the first time from diladele.com repo, run t
 
     # add new repo
     echo "deb https://squid57.diladele.com/ubuntu/ focal main" \
-        > /etc/apt/sources.list.d/squid57.diladele.com.list
+        | sudo tee /etc/apt/sources.list.d/squid57.diladele.com.list
 
     # and install
-    apt-get update && apt-get install -y \
+    sudo apt-get update && sudo apt-get install -y \
         squid-common \
         squid-openssl \
         squidclient \
