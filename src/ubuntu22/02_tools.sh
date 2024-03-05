@@ -25,4 +25,5 @@ apt-get -y install \
    libgnutls28-dev \
    libltdl-dev \
    libecap3-dev \
-   libdbi-perl
+   libdbi-perl \
+   pkgconf
