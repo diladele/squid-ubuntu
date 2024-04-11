@@ -4,18 +4,18 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile modern version of Squid on Ubuntu 20.04 and 22.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
+This project provides scripts needed to recompile modern version of Squid on Ubuntu 22.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
-**Squid 6.8 Repo for Ubuntu 22.04 LTS**
+**Squid 6.9 Repo for Ubuntu 22.04 LTS**
 ----------------------------------------
 
-If you are installing Squid 6.8 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 6.9 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add new repo
-    echo "deb https://squid68.diladele.com/ubuntu/ jammy main" \
+    echo "deb https://squid69.diladele.com/ubuntu/ jammy main" \
         > /etc/apt/sources.list.d/squid68.diladele.com.list
 
     # and install
@@ -30,7 +30,7 @@ If you have installed previous versions of Squid 6 from this repo then run "sudo
 **Squid 5.7 Repo for Ubuntu 20.04 LTS**
 ----------------------------------------
 
-If you are installing Squid 5.7 for the first time from diladele.com repo, run the following commands:
+Older versions of Squid can also be installed from old versions of diladele.com repo using the following commands:
 
     # add diladele apt key
     wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
@@ -50,18 +50,18 @@ If you have installed previous versions of Squid 5 from this repo then run "sudo
 
 **HTTP and HTTPS Filtering Using Squid and ICAP**
 -------------------------------------------------
-In case you need a high quality HTTP(S) web filtering solution, take a look at [**Web Safety**](https://www.diladele.com). 
+In case you need a high quality HTTP(S) web filtering/secure web gateway solution, consider taking a look at [**Web Safety**](https://www.diladele.com). 
 
-Web Safety for Squid Proxy is an ICAP web filtering server that integrates with Squid proxy server and provides rich content and web filtering functionality to sanitize Internet traffic passing into an internal home/enterprise network. It may be used to block illegal or potentially malicious file downloads, remove annoying advertisements, prevent access to various categories of web sites and block resources with adult/explicit content.
+Web Safety for Squid Proxy is an ICAP web filtering server/secure web gateway that integrates with Squid proxy server and provides rich content and web filtering functionality to sanitize Internet traffic passing into an internal home/enterprise network. It may be used to block illegal or potentially malicious file downloads, remove annoying advertisements, check downloaded files for viruses, prevent access to various categories of web sites and block resources with adult/explicit content.
 
-Web Safety also has a very good Admin UI that you can use to manage your Squid proxy from the browser. 
+Web Safety also has a user friendly Admin UI that you can use to manage your Squid proxy from the browser. 
 
 To try it out, have a look at [Virtual Appliance ESXi/Hyper-v](https://www.diladele.com/download.html), [deploy in Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/diladele.websafety?tab=Overview) or [deploy in Amazon AWS](https://aws.amazon.com/marketplace/pp/B07KJHLHKC)
 
 **Web Filtering Proxy for Microsoft Windows**
 ---------------------------------------------
 
-If your need a native Windows only web filtering solution please consider taking a look at [Web Filtering Proxy](https://webproxy.diladele.com). Web Filtering Proxy for Microsoft Windows is a new implementation of web filtering proxy running natively on Microsoft Windows. It can be easily integrated with Microsoft Active Directory, work as Secure Web Proxy, decrypt HTTPS traffic, filter HTTP requests and responses and inspect contents of HTML pages.
+If your need a native Windows only web filtering solution consider taking a look at [Web Filtering Proxy](https://webproxy.diladele.com). Web Filtering Proxy for Microsoft Windows is a new implementation of web filtering proxy/secure web gateway running natively on Microsoft Windows. It can be easily integrated with Microsoft Active Directory, work as Secure Web Proxy, decrypt HTTPS traffic, filter HTTP requests and responses and inspect contents of HTML pages.
 
 The proxy is installed natively on Microsoft Windows and can be managed by any administrator using Microsoft Management Console. The [Admin Guide](https://webproxy.diladele.com/docs/) is available online.
 
