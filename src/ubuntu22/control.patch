@@ -1,11 +1,21 @@
---- control.old	2022-10-12 10:24:13.396181441 +0000
-+++ control	2022-10-12 10:24:35.228069617 +0000
-@@ -13,7 +13,7 @@
- # The compiler dependencies are relevant for backporting.
- 	, g++ (>= 4.9) <!cross> | clang (>= 3.7) <!cross>
- 	, gcc (>= 4.9) <!cross> | clang (>= 3.7) <!cross>
--	, debhelper-compat (= 13)
-+	, debhelper-compat (= 12)
-     , lsb-release
- 	, dh-apparmor
- 	, libcppunit-dev
+--- control	2024-10-28 10:04:20.000000000 +0000
++++ control.new	2024-10-29 11:29:28.665692635 +0000
+@@ -34,7 +34,6 @@
+ 
+ Package: squid
+ Architecture: any
+-Pre-Depends: ${misc:Pre-Depends}, adduser
+ Depends: ${shlibs:Depends}, ${misc:Depends}, netbase, logrotate (>= 3.5.4-1), squid-common (>= ${source:Version}), libdbi-perl
+ Suggests: squidclient, squid-cgi, squid-purge, resolvconf (>= 0.40), smbclient, ufw, winbind, apparmor
+ Recommends: libcap2-bin [linux-any], ca-certificates
+@@ -47,8 +46,8 @@
+ 
+ Package: squid-openssl
+ Architecture: any
+-Pre-Depends: ${misc:Pre-Depends}, squid (>= ${source:Version})
+-Depends: ${shlibs:Depends}, ${misc:Depends}, netbase, ca-certificates
++Pre-Depends: ${misc:Pre-Depends}, adduser
++Depends: ${shlibs:Depends}, ${misc:Depends}, netbase, logrotate (>= 3.5.4-1), squid-common (>= ${source:Version}), libdbi-perl, ca-certificates
+ Description: Full featured Web Proxy cache (HTTP proxy OpenSSL flavour)
+  Squid is a high-performance proxy caching server for web clients, supporting
+  FTP, ICY and HTTP data objects.

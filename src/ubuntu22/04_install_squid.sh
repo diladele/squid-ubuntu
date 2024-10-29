@@ -14,11 +14,15 @@ pushd build/squid
 # install squid packages
 sudo apt-get install squid-langpack
 dpkg --install squid-common_${SQUID_PKG}_all.deb
+dpkg --install squid_${SQUID_PKG}_amd64.deb
 dpkg --install squid-openssl_${SQUID_PKG}_amd64.deb
 dpkg --install squidclient_${SQUID_PKG}_amd64.deb
 
 # and revert
 popd
+
+# switch to openssl based squid
+update-alternatives --set squid /usr/sbin/squid-openssl
 
 # verify the installed squid binary
 systemctl stop squid && systemctl start squid && systemctl status squid && /usr/sbin/squid -v
