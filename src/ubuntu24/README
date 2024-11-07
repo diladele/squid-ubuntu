@@ -1,0 +1,9 @@
+Currently Squid 6.12 from Debian cannot be build on Ubuntu 24.04 - there is an error https://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1998244.html
+
+One way to still build is to disable the link optimization as in rules.patch
+
+We need to wait till upstream fixes it.
+For now we do NOT move web safety to Ubuntu 24.04 as base platform.
+
+
+
