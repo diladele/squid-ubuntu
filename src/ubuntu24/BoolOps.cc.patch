@@ -1,0 +1,11 @@
+--- BoolOps.cc	2023-07-06 05:15:40.000000000 +0000
++++ BoolOps.cc.new	2023-07-11 16:12:35.904802697 +0000
+@@ -17,7 +17,7 @@
+ Acl::NotNode::NotNode(ACL *acl)
+ {
+     assert(acl);
+-    Must(strlen(acl->name) <= sizeof(name)-2);
++    //Must(strlen(acl->name) <= sizeof(name)-2);
+     name[0] = '!';
+     name[1] = '\0';
+     xstrncpy(&name[1], acl->name, sizeof(name)-1); // -1 for '!'

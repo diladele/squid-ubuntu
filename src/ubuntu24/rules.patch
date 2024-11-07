@@ -1,0 +1,10 @@
+--- rules	2024-10-28 10:04:20.000000000 +0000
++++ rules.new	2024-11-07 07:51:13.126232743 +0000
+@@ -1,6 +1,6 @@
+ #! /usr/bin/make -f
+ 
+-export DEB_BUILD_MAINT_OPTIONS = hardening=+all
++export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
+ export DEB_CFLAGS_MAINT_APPEND = -Wno-error=deprecated-declarations
+ export DEB_CXXFLAGS_MAINT_APPEND = -Wno-error=deprecated-declarations
+ 
