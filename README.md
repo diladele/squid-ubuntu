@@ -6,6 +6,15 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile modern version of Squid on Ubuntu 22.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repos hosted by diladele.com.
 
+**Squid openssl for Ubuntu 24.04 LTS**
+----------------------------------------
+
+The default version of Ubuntu 24.04 noble comes with both packages. If you already installed squid packages uninstall it and install squid-openssl
+
+    sudo apt-get install squid-openssl
+
+    
+
 **Squid 6.10 Repo for Ubuntu 22.04 LTS**
 ----------------------------------------
 
