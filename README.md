@@ -13,17 +13,17 @@ The default version of Ubuntu 24.04 noble comes with both `squid` and `squid-ope
 
     sudo apt-get install squid-openssl
 
-**Squid 6.10 Repo for Ubuntu 22.04 LTS**
+**Squid 6.13 Repo for Ubuntu 22.04 LTS**
 ----------------------------------------
 
-If you are installing Squid 6.10 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 6.13 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add new repo
-    echo "deb https://squid610.diladele.com/ubuntu/ jammy main" \
-        > /etc/apt/sources.list.d/squid610.diladele.com.list
+    echo "deb https://squid613.diladele.com/ubuntu/ jammy main" \
+        > /etc/apt/sources.list.d/squid613.diladele.com.list
 
     # and install
     apt-get update && apt-get install -y \
