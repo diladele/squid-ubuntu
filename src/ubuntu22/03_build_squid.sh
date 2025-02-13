@@ -31,7 +31,6 @@ wget http://http.debian.net/debian/pool/main/s/squid/squid_${SQUID_PKG}.debian.t
 dpkg-source -x squid_${SQUID_PKG}.dsc
 
 # patch the opts
-# patch squid-${SQUID_VER}/debian/control < control.patch
 patch squid-${SQUID_VER}/src/acl/BoolOps.cc < BoolOps.cc.patch
 
 # build the package
