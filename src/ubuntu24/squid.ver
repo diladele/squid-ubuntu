@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# set squid version
+SQUID_VER="7.1"
+SQUID_PKG="${SQUID_VER}-1"
