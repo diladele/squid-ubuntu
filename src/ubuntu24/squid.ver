@@ -2,4 +2,4 @@
 
 # set squid version
 SQUID_VER="7.2"
-SQUID_PKG="${SQUID_VER}-1"
+SQUID_PKG="${SQUID_VER}-2"

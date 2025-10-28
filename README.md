@@ -6,17 +6,17 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile latest version of Squid on Ubuntu 24.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repo hosted by diladele.com.
 
-**Squid 7.1 Repo for Ubuntu 24.04 LTS**
+**Squid 7.2 Repo for Ubuntu 24.04 LTS**
 ---------------------------------------
 
-If you are installing Squid 7.1 for the first time from diladele.com repo, run the following commands:
+If you are installing Squid 7.2 for the first time from diladele.com repo, run the following commands:
 
     # add diladele apt key
     wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
 
     # add new repo
-    echo "deb https://squid71.diladele.com/ubuntu/ noble main" \
-        > /etc/apt/sources.list.d/squid71.diladele.com.list
+    echo "deb https://squid72.diladele.com/ubuntu/ noble main" \
+        > /etc/apt/sources.list.d/squid72.diladele.com.list
 
     # and install
     apt update && apt install -y \
@@ -24,7 +24,7 @@ If you are installing Squid 7.1 for the first time from diladele.com repo, run t
         squid-openssl \
         libecap3 libecap3-dev
 
-If you have installed previous versions of Squid 7 from this repo then run "sudo apt update && sudo apt upgrade". Also check that your current squid.conf file from previous version is not overwritten.
+If you have installed previous versions of Squid 7 from this repo then run "sudo apt update && sudo apt upgrade". Also check that your current `squid.conf` file from previous version is not overwritten.
 
 
 **Squid 6.13 Repo for Ubuntu 22.04 LTS**

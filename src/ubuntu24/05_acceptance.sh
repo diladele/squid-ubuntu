@@ -10,5 +10,7 @@ rm -rf _acceptance && mkdir _acceptance
 # publish acceptance
 cp build/squid/squid*.deb _acceptance/
 cp build/squid/squid*.ddeb _acceptance/
+cp build/squid/squid*.buildinfo _acceptance/
+cp build/squid/squid*.changes _acceptance/
 
 echo "Success, DEB/DDEB files are in acceptance folder!"
