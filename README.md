@@ -4,70 +4,12 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile latest version of Squid on Ubuntu 24.04 LTS with support for HTTPS filtering and SSL inspection. Results of the compilation are available in the public repo hosted by diladele.com.
+This project provides scripts needed to recompile latest version of Squid on Ubuntu 24.04 LTS with support for HTTPS filtering and SSL inspection.
 
-**Squid 7.2 Repo for Ubuntu 24.04 LTS**
+**Squid 7.4 Repo for Ubuntu 24.04 LTS**
 ---------------------------------------
 
-If you are installing Squid 7.2 for the first time from diladele.com repo, run the following commands:
-
-    # add diladele apt key
-    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
-
-    # add new repo
-    echo "deb https://squid72.diladele.com/ubuntu/ noble main" \
-        > /etc/apt/sources.list.d/squid72.diladele.com.list
-
-    # and install
-    apt update && apt install -y \
-        squid-common \
-        squid-openssl \
-        libecap3 libecap3-dev
-
-If you have installed previous versions of Squid 7 from this repo then run "sudo apt update && sudo apt upgrade". Also check that your current `squid.conf` file from previous version is not overwritten.
-
-
-**Squid 6.13 Repo for Ubuntu 22.04 LTS**
-----------------------------------------
-
-To install old version of Squid 6 on Ubuntu 22.04, run the following commands:
-
-    # add diladele apt key
-    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
-
-    # add new repo
-    echo "deb https://squid613.diladele.com/ubuntu/ jammy main" \
-        > /etc/apt/sources.list.d/squid613.diladele.com.list
-
-    # and install
-    apt-get update && apt-get install -y \
-        squid-common \
-        squid-openssl \
-        squidclient \
-        libecap3 libecap3-dev
-
-If you have installed previous versions of Squid 6 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
-
-**Squid 5.7 Repo for Ubuntu 20.04 LTS**
----------------------------------------
-
-To install old version of Squid 5 on Ubuntu 20.04, run the following commands:
-
-    # add diladele apt key
-    wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
-
-    # add new repo
-    echo "deb https://squid57.diladele.com/ubuntu/ focal main" \
-        > /etc/apt/sources.list.d/squid57.diladele.com.list
-
-    # and install
-    apt-get update && apt-get install -y \
-        squid-common \
-        squid-openssl \
-        squidclient \
-        libecap3 libecap3-dev
-
-If you have installed previous versions of Squid 5 from this repo then run "sudo apt-get update && sudo apt-get upgrade". Also check that your current squid.conf file from previous version is not overwritten.
+To install the latest compiled version of Squid 7.4 for Ubuntu 24.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_4_1-ubuntu-24_04/
 
 **HTTPS Decryption and Web Filtering for Squid using ICAP**
 -----------------------------------------------------------
