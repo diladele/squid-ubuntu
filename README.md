@@ -4,12 +4,12 @@ Squid for Ubuntu
 > Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
 > <cite> <http://www.squid-cache.org>
 
-This project provides scripts needed to recompile latest version of Squid on Ubuntu 24.04 LTS with support for HTTPS filtering and SSL inspection.
+This project provides scripts needed to recompile latest version of Squid on Ubuntu 26.04 LTS with support for HTTPS filtering and SSL inspection.
 
-**Squid 7.4 Repo for Ubuntu 24.04 LTS**
+**Squid 7.5 Repo for Ubuntu 26.04 LTS**
 ---------------------------------------
 
-To install the latest compiled version of Squid 7.4 for Ubuntu 24.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_4_1-ubuntu-24_04/
+To install the latest compiled version of Squid 7.5 for Ubuntu 26.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_5_1-ubuntu-26_04/
 
 **HTTPS Decryption and Web Filtering for Squid using ICAP**
 -----------------------------------------------------------
@@ -35,7 +35,7 @@ In case full featured HTTPS decryption and web filtering is not possible in your
 
 DNS Safety is supposed to be deployed as primary DNS server in your local network and can forward DNS requests to your ISP's DNS server, Google Public DNS, OpenDNS and other third party DNS providers. Internal DNS requests can be forwarded to internal DNS servers (for example Active Directory domain controllers).
 
-The filter can be easily managed from full featured Web UI deployed on Debian 10 or Ubuntu 18. Other operating systems might be supported too in the near future.
+DNS Safety can be easily managed from full featured Web UI deployed on Debian 13. 
 
 **Help**
 --------
