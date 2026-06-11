@@ -6,10 +6,10 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile latest version of Squid on Ubuntu 26.04 LTS with support for HTTPS filtering and SSL inspection.
 
-**Squid 7.5 Repo for Ubuntu 26.04 LTS**
+**Squid 7.6 Repo for Ubuntu 26.04 LTS**
 ---------------------------------------
 
-To install the latest compiled version of Squid 7.5 for Ubuntu 26.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_5_1-ubuntu-26_04/
+To install the latest compiled version of Squid 7.6 for Ubuntu 26.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_6_1-ubuntu-26_04/
 
 **HTTPS Decryption and Web Filtering for Squid using ICAP**
 -----------------------------------------------------------
