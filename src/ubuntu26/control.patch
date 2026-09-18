@@ -1,0 +1,11 @@
+--- control	2026-09-16 15:58:11.000000000 +0000
++++ control.new	2026-09-18 11:38:58.938950056 +0000
+@@ -13,7 +13,7 @@
+ # The compiler dependencies are relevant for backporting.
+ 	, g++ (>= 5) <!cross> | clang (>= 3.8) <!cross>
+ 	, gcc (>= 5) <!cross> | clang (>= 3.8) <!cross>
+-	, debhelper-compat (= 14)
++	, debhelper-compat (= 13)
+ 	, dh-apparmor
+ 	, libcppunit-dev <!nocheck>
+ 	, libcap2-dev [linux-any]
