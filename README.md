@@ -6,20 +6,20 @@ Squid for Ubuntu
 
 This project provides scripts needed to recompile latest version of Squid on Ubuntu 26.04 LTS with support for HTTPS filtering and SSL inspection.
 
-**Squid 7.7 Repo for Ubuntu 26.04 LTS**
+**Squid 7.8 Repo for Ubuntu 26.04 LTS**
 ---------------------------------------
 
-To install the latest compiled version of Squid 7.7 for Ubuntu 26.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_7_1-ubuntu-26_04/
+To install the latest compiled version of Squid 7.8 for Ubuntu 26.04 LTS 64-bit use instructions from this repository https://github.com/diladele/repo-squid-7_8_1-ubuntu-26_04/
 
 **HTTPS Decryption and Web Filtering for Squid using ICAP**
 -----------------------------------------------------------
-In case you need a high quality HTTP(S) web filtering/secure web gateway solution, consider taking a look at [**Web Safety**](https://www.diladele.com/websafety/). 
+In case you need a high quality HTTP(S) web filtering/secure web gateway solution to deploy in your network, consider taking a look at [**Web Safety**](https://www.diladele.com/websafety/). 
 
 Web Safety for Squid Proxy is an ICAP web filtering server/secure web gateway that integrates with Squid proxy server and provides rich content and web filtering functionality to sanitize Internet traffic passing into an internal home/enterprise network. It may be used to block illegal or potentially malicious file downloads, remove annoying advertisements, check downloaded files for viruses, prevent access to various categories of web sites and block resources with adult/explicit content.
 
 Web Safety also has a user friendly Admin UI that you can use to manage your Squid proxy from the browser. 
 
-To try it out, have a look at [Virtual Appliance ESXi/Hyper-v](https://www.diladele.com/websafety/download.html), [deploy in Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/diladele.websafety?tab=Overview) or [deploy in Amazon AWS](https://aws.amazon.com/marketplace/pp/B07KJHLHKC)
+To try it out, have a look at [Virtual Appliance ESXi/Hyper-v](https://www.diladele.com/websafety/download.html), [deploy in Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/diladele.websafety?tab=Overview) or [deploy in Amazon AWS](https://aws.amazon.com/marketplace/pp/B07KJHLHKC).
 
 **Web Filtering Proxy for Microsoft Windows**
 ---------------------------------------------
